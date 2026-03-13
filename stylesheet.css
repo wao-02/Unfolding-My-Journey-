@@ -1,0 +1,379 @@
+/* ブラウザで設定されているスタイルのリセット・共通設定 */
+/* 消さないでください */
+:root {
+  --animation: 1s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+/* スタイルのリセット終了 */
+.Dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* ここからコード開始*/
+body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+}
+
+/* ヘッダー */
+
+.header {
+  background-color: rgba(74, 103, 65, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-left,
+.header-right {
+  flex: 1;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header-right {
+  animation: zoomIn var(--animation) ease-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.sns {
+  margin: 10px 20px;
+}
+
+.sns i {
+  font-size: 30px;
+  padding: 0px 10px;
+  margin: 0px 10px;
+  color: #2d2926;
+}
+
+.sns :hover {
+  color: #f9f7f2;
+}
+
+.header-link {
+  margin: 10px 0px;
+}
+
+.header h1 {
+  margin: 0px 10px;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #2d2926;
+}
+
+.header h1 {
+  animation: zoomIn var(--animation) ease-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.header img {
+  width: 10%;
+}
+
+.header img {
+  animation: zoomIn var(--animation) ease-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.header ul {
+  margin: 0px 10px;
+}
+
+.header li {
+  float: left;
+  padding: 5px 5px;
+  margin: 5px 5px;
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.header li :hover {
+  color: white;
+}
+
+.header a {
+  text-decoration: none;
+  color: #2d2926;
+}
+
+.sns {
+  display: block;
+}
+
+.menu {
+  display: none;
+}
+
+.menu-checkbox {
+  display: none;
+}
+
+/* メイン */
+
+.main {
+  background-color: #f9f7f2;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 2fr;
+  align-items: start;
+}
+
+.main-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.komuz {
+  width: 65%;
+  min-width: 250px;
+  margin: 50px 75px 55px 75px;
+  border-radius: 12px;
+  box-shadow: 15px 15px rgba(74, 103, 65, 0.75);
+  border: 1px solid #ddd;
+}
+
+.komuz {
+  opacity: 0;
+  animation: feadIn 1s ease-out forwards;
+}
+
+@keyframes feadIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.main-right {
+  flex: 1.5;
+  min-width: 0;
+}
+
+.main-right-top {
+  display: flex;
+  gap: 50px;
+}
+
+.manas {
+  width: 30%;
+  margin: 70px 10px 20px 0px;
+  border-radius: 12px;
+  box-shadow: 15px 15px rgba(74, 103, 65, 0.75);
+  border: 1px solid #ddd;
+  height: auto;
+  flex-shrink: 1;
+  min-width: 200px;
+}
+
+.manas {
+  opacity: 0;
+  animation: feadIn var(--animation) ease-out forwards;
+}
+
+@keyframes feadIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.textbox {
+  margin: 100px auto 0px auto;
+  flex: 1;
+  min-width: 200px;
+}
+
+.textbox {
+  opacity: 0;
+  animation: feadIn 1s ease-out forwards;
+}
+
+@keyframes feadIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.textbox h1 {
+  font-size: 50px;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #2d2926;
+  word-break: break-word;
+}
+
+.textbox p {
+  margin: 20px 0px;
+  font-size: 20px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #2d2926;
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 15px;
+  width: 100%;
+  margin: 50px 0px;
+  align-self: stretch;
+}
+
+.btn-group {
+  opacity: 0;
+  animation: feadIn 1s ease-out forwards;
+}
+
+@keyframes feadIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 0px 40px 0px 0px;
+  padding: 10px 5px;
+  height: 100%;
+  width: 90%;
+  background-color: #f9f7f2;
+  box-shadow: 15px 15px rgba(74, 103, 65, 0.75);
+  border: 3px solid #2d2926;
+}
+
+.btn:hover {
+  transform: translateY(-10px);
+}
+
+.btn:active {
+  position: relative;
+  top: 15px;
+  box-shadow: 15px 0px rgba(74, 103, 65, 0.75);
+}
+
+.btn a {
+  text-decoration: none;
+}
+
+.btn h6 {
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #2d2926;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0px;
+}
+
+.btn i {
+  text-align: center;
+  display: block;
+  margin: 10px 10px;
+  font-size: 50px;
+  color: #2d2926;
+}
+
+.btn p {
+  text-align: center;
+  margin: 20px 5px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #2d2926;
+  font-size: 18px;
+}
